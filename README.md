@@ -26,7 +26,6 @@ pipenv shell
 
 ```
 docker-compose up -d
-python3 app/manage.py makemigrations
 python3 app/manage.py migrate
 python3 app/manage.py createsuperuser
 ```
