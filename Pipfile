@@ -7,7 +7,7 @@ name = "pypi"
 python_version = "3.8"
 
 [packages]
-django = "==3.1"
+django = "==4.2"
 environs = "==9.5.0"
 psycopg2-binary = "==2.9.6"
 Pillow = "==9.5.0"

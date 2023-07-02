@@ -20,4 +20,4 @@ COPY ./run.sh /code/
 
 CMD ["bash", "/code/run.sh" ]
 
-EXPOSE 8000
+EXPOSE 8080

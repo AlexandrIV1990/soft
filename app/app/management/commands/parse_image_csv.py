@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.core.management.base import BaseCommand
 from django.db.transaction import atomic
 
@@ -19,9 +20,15 @@ class Command(BaseCommand):
             default=False,
             help='Очистить базу данных'
         )
+        parser.add_argument(
+            '-p',
+            '--path',
+            default=settings.PATH_CSV,
+            help='первая часть названия'
+        )
 
     @atomic
     def parse_csv(self, options):
         if options['clear_db']:
             Image.objects.all().delete()
-        CreateImageDB().execute()
+        CreateImageDB(options['path']).execute()

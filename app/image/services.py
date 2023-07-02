@@ -7,8 +7,11 @@ from image.models import Image, Category
 
 class CreateImageDB:
 
+    def __init__(self, path):
+        self.path = path
+
     def _parse_image_csv(self):  # noqa
-        with open(settings.PATH_CSV, "r") as csv_file:
+        with open(self.path, "r") as csv_file:
             f = csv.reader(csv_file, delimiter=';')
             data_rows = []
             data_categories = []
