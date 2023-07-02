@@ -7,8 +7,6 @@ su
 apt update; apt upgrade -y; apt install -y curl; curl -sSL https://get.docker.com/ | sh; curl -L https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 ```
 
-Don't forget press CTRL+D to exit from super user account.
-
 2. Apply environment variables:
 
 ```
@@ -28,19 +26,19 @@ pipenv shell
 
 ```
 docker-compose up -d
-python3 backend/manage.py makemigrations
-python3 backend/manage.py migrate
-python3 backend/manage.py createsuperuser
+python3 app/manage.py makemigrations
+python3 app/manage.py migrate
+python3 app/manage.py createsuperuser
 ```
 
 6. Run script (params: "-c" clear database, "-p" 
 pass the full path to the file, by default it is taken from .env PATH_CSV )
 ```
-python manage.py parse_image_csv -c 
+python app/manage.py parse_image_csv -c 
 ```
 
 7. Run the server:
 
 ```
-python3 backend/manage.py runserver
+python3 app/manage.py runserver 8080
 ```

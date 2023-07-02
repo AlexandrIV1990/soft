@@ -1,0 +1,15 @@
+image.png;50;auto;niva
+image1.jpg;500;flight;airlplane
+image2.jpg;3300;show;britain;bennyhill;sketches;tv
+image3.jpg;1500;games;minecraft;blocks;sandbox
+image4.jpg;120;onlycategory
+image5.jpg;500;auto;bmv
+image6.jpg;1500;flight;airlplane;boing
+image7.jpg;1300;video;britain;london;sketches;tv
+image8.jpg;500;games;warcraft;orcs;strategy
+image9.jpg;20;onlycategory
+image10.jpg;50;auto;mersedec
+http://localhost:8080/static/image1.jpg;1500;flight;airlplane
+http://localhost:8080/static/image2.jpg;300;show;britain;bennyhill;sketches;tv
+http://localhost:8080/static/image3.jpg;150;games;minecraft;blocks;sandbox
+http://localhost:8080/static/image4.jpg;12;onlycategory

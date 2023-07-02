@@ -18,7 +18,7 @@ class Category(models.Model):
 
 class Image(models.Model):
     image_url = models.ImageField(upload_to='uploads/', verbose_name='Ссылка на картинку')
-    needed_amount_of_shows = models.PositiveIntegerField(null=True, verbose_name='Необходимое количество показов')
+    needed_amount_of_shows = models.PositiveIntegerField(default=0, verbose_name='Необходимое количество показов')
     categories = models.ManyToManyField("Category", verbose_name='Категории', blank=True, null=True,
                                         related_name='images')
     is_last = models.BooleanField(verbose_name='Показывалась последней', default=False)
